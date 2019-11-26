@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Book</title>
+</head>
+<body>
+    <h2>Book Update Form</h2>
+    <hr>
+    <form method="post" action="./update">
+        {% csrf_token 'all' %}
+        <input type="hidden" name ="txt_id" value="{{id}}">
+        <p>ID : <input type="text" value="{{id}}" ></p>
+        <p>BOOK NAME : <input type="text" name="txt_name" value="{{book_name}}"></p>
+        <p>BOOK GENRE : <input type="text" name="txt_genre" value="{{book_genre}}"></p>
+        <p>BOOK WRITER : <input type="text" name="txt_writer" value="{{book_writer}}"></p>
+        <p>BOOK RATING : <input type="text" name="txt_rating" value="{{book_rating}}"></p>
+        <p><input type="submit" value="SAVE"></p>
+    </form>
+    <hr>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INSERT</title>
+</head>
+<body>
+    <h2>New Book Entry Form</h2>
+    <hr>
+    <form method="post">
+        {% csrf_token 'all' %}
+        <p>BOOK NAME : <input type="text" name="txt_name"></p>
+        <p>BOOK GENRE : <input type="text" name="txt_genre"></p>
+        <p>BOOK WRITER : <input type="text" name="txt_writer"></p>
+        <p>BOOK RATING : <input type="text" name="txt_rating"></p>
+        <p><input type="submit" value="SAVE"></p>
+    </form>
+    <hr>
+</body>
+</html>

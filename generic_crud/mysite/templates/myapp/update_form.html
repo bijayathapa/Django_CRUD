@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Movie</title>
+</head>
+<body>
+    <h2>Movie Update Form</h2>
+    <hr>
+    <form method="post" action="./update">
+        {% csrf_token 'all' %}
+        <input type="hidden" name ="txt_id" value="{{movie.id}}">
+        <p>ID : <input type="text" value="{{movie.id}}" disabled></p>
+        <p>MOVIE NAME : <input type="text" name="txt_name" value="{{movie.movie_name}}"></p>
+        <p>MOVIE GENRE : <input type="text" name="txt_genre" value="{{movie.movie_genre}}"></p>
+        <p>MOVIE DIRECTOR : <input type="text" name="txt_director" value="{{movie.movie_director}}"></p>
+        <p>MOVIE RATINGS : <input type="text" name="txt_rating" value="{{movie.movie_rating}}"></p>
+        <p><input type="submit" value="SAVE"></p>
+    </form>
+    <hr>
+</body>
+</html>

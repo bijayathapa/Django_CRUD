@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><a href="insert">ADD NEW</a></p>
+<table border="1" width="90%" align="center">
+    <tr align="center"><td>BOOK ID</td><td>BOOK NAME</td><td>BOOK GENRE</td><td>BOOK WRITER</td><td>BOOK RATINGS</td><td>MANAGE</td></tr>
+   {% for book in books %}
+        <tr align="center"><td>{{ book.0}}</td><td>{{book.1}}</td><td>{{book.2}}</td><td>{{book.3}}</td><td>{{book.4}}</td><td><a href="search_update?id={{book.0}}">Edit</a> &nbsp; | &nbsp;<a href="delete/{{book.0}}">Delete</a></td></tr>
+    {% endfor %}
+</table>
+</body>
+</html>

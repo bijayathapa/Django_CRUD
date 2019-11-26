@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD MOVIE</title>
+</head>
+<body>
+    <h2>Add New Movie Form</h2>
+    <hr>
+    <form method="post">
+        {% csrf_token 'all' %}
+        <p>MOVIE NAME : <input type="text" name="txt_name"></p>
+        <p>MOVIE GENRE : <input type="text" name="txt_genre"></p>
+        <p>MOVIE DIRECTOR : <input type="text" name="txt_director"></p>
+        <p>MOVIE RATINGS : <input type="text" name="txt_rating"></p>
+        <p><input type="submit" value="SAVE"></p>
+    </form>
+    <hr>
+</body>
+</html>
